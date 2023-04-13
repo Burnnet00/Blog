@@ -7,4 +7,8 @@ class PostView(View):
     def get (self, reguest):
         posts = Post.objects.all()
         return render(reguest, 'blog/blog.html', {'post_list': posts})
-# Create your views here.
+
+class PostDetail(View):
+    def get (self, reguest, pk):
+        post = Post.objects.get(id=pk)
+        return render(reguest, 'blog/blog_detail.html', {'post': post})
