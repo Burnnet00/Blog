@@ -77,9 +77,8 @@
 					<p>
 						{{ comment.text_comments }}
 					</p>
-					<p>
-						{{ comment.email }}
-					</p>
+					<div> <span class="contact" ></span> <a class="color" e href="mailto:{{ comment.email }}">{{ comment.email }}</a> </div>
+
 
 				</div>
 				{% endfor %}
