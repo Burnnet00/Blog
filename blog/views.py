@@ -42,7 +42,7 @@ class AddLike(View):
         except:
             new_like = Likes()
             new_like.ip = ip_client
-            new_like.pos_id = int(pk)#pos - id?
+            new_like.pos_id = int(pk)
             new_like.save()
             return redirect(f'/{pk}')
 
